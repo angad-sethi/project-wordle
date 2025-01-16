@@ -5,7 +5,6 @@ function Guess({ guesses, answer, setResult, numOfguesses }) {
   return (
     <div class="guess-results">
       {guesses.map((guess, index) => {
-        console.log(index);
         const checkedArray = checkGuess(guess, answer);
 
         if (guess === answer && numOfguesses <= 6) {
