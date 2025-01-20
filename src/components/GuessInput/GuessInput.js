@@ -9,6 +9,10 @@ function GuessInput({ handleGuessSubmit, setResult }) {
         onSubmit={(event) => {
           event.preventDefault();
 
+          if (textValue.length > 5) {
+            setResult("Hack");
+            return;
+          }
           handleGuessSubmit(textValue);
           setTextValue("");
         }}
@@ -20,10 +24,6 @@ function GuessInput({ handleGuessSubmit, setResult }) {
           type="text"
           value={textValue}
           onChange={(event) => {
-            if (event.target.value.length > 5) {
-              setResult("Hack");
-              return;
-            }
             const upperCase = event.target.value.toUpperCase();
             setTextValue(upperCase);
           }}
