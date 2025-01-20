@@ -18,6 +18,16 @@ function Banner({ result, answer, numOfguesses }) {
         </p>
       </div>
     );
+  } else if (result === "Hack") {
+    return (
+      <div class="sad banner">
+        <p>
+          Sorry, the Carlton blues haven't won a championship since 1995 despite
+          having a championship team and coach and all the money in the world.
+          Please cry alone and don't get the tears on the keyboard Ryan.
+        </p>
+      </div>
+    );
   } else {
     return null;
   }

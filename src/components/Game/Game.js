@@ -25,7 +25,7 @@ function Game() {
         setResult={setResult}
         numOfguesses={guesses.length}
       />
-      <GuessInput handleGuessSubmit={handleGuessSubmit} />
+      <GuessInput handleGuessSubmit={handleGuessSubmit} setResult={setResult} />
       <Banner result={result} answer={answer} numOfguesses={guesses.length} />
     </>
   );
